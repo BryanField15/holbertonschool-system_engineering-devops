@@ -34,3 +34,21 @@ This outlines the design of a distributed web infrastructure. It details a three
 - **Single Point of Failure (SPOF)**: While a distributed setup can mitigate some risks, SPOF still exist. For instance, if your load balancer or the primary node of your database fails, it could cause significant issues.
 - **Security**: Without a proper firewall and HTTPS, your setup is vulnerable to various types of attacks, such as DDoS attacks and data breaches.
 - **Monitoring**: Without a proper monitoring solution, it might be difficult to identify and react to issues in a timely manner, which could lead to extended downtime or data loss.
+
+# Secured and Monitored Web Infrastructure
+
+This README covers the design of a secure, encrypted, and monitored web infrastructure. It details a three-server setup that hosts the website www.foobar.com.
+## Specifics to explain about this infrastructure
+
+- **Additional elements**: Each additional element enhances the security, encryption, and monitoring of your infrastructure. Firewalls protect your servers from malicious traffic, SSL certificate encrypts the data in transit, and monitoring clients help track the performance and health of your servers.
+- **Firewalls**: Firewalls act as a security system for your servers, controlling the incoming and outgoing network traffic based on predetermined security rules.
+- **HTTPS**: Serving traffic over HTTPS means that all communication between the browser and the website is encrypted, ensuring the confidentiality and integrity of the transferred data.
+- **Monitoring**: Monitoring helps you to track the performance and health of your servers, alerting you to any potential issues before they can cause significant damage.
+- **Data Collection**: Monitoring tools collect data about system performance, usage, and potential errors. This information is crucial for identifying and diagnosing problems, as well as optimizing performance.
+- **Web Server QPS Monitoring**: QPS (Queries Per Second) is a measure of how much traffic your web server is handling. To monitor it, you could use a tool like the `mod_status` module in Apache or the `HttpStubStatusModule` module in Nginx.
+
+## Potential issues with this infrastructure
+
+- **SSL Termination at Load Balancer**: If SSL termination happens at the load balancer level, it means that traffic between the load balancer and the servers is not encrypted, which can be a security concern if your servers are not in a secure network.
+- **Single MySQL Server for Writes**: Having only one MySQL server capable of accepting writes is a single point of failure. If that server goes down, write operations to the database will be halted until it is restored.
+- **Uniform Server Components**: If all servers have the same components (database, web server, and application server), it might lead to inefficient resource use. It also does not take advantage of the possibilities of specializing servers to better handle specific tasks.
