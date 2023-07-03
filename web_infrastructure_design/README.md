@@ -52,3 +52,14 @@ This covers the design of a secure, encrypted, and monitored web infrastructure.
 - **SSL Termination at Load Balancer**: If SSL termination happens at the load balancer level, it means that traffic between the load balancer and the servers is not encrypted, which can be a security concern if your servers are not in a secure network.
 - **Single MySQL Server for Writes**: Having only one MySQL server capable of accepting writes is a single point of failure. If that server goes down, write operations to the database will be halted until it is restored.
 - **Uniform Server Components**: If all servers have the same components (database, web server, and application server), it might lead to inefficient resource use. It also does not take advantage of the possibilities of specializing servers to better handle specific tasks.
+
+# 3-Scale-Up Web Infrastructure
+
+Thistask focuses on the scale-up of a web infrastructure. It details the addition of another server and a load balancer configured as a cluster, as well as the separation of components (web server, application server, database) each to their own dedicated server. This setup hosts the website www.foobar.com.
+
+## Specifics to explain about this infrastructure
+
+- **Additional elements**: Each added element plays a crucial role in scaling up the infrastructure. The new server provides additional resources to handle more traffic. The clustered load balancer enhances the resilience and availability of your website, while splitting the components into dedicated servers allows for better performance and troubleshooting.
+- **Server addition**: Adding a new server to the existing infrastructure helps to distribute the workload more effectively and handle higher traffic.
+- **Load balancer cluster**: Configuring the new load balancer in a cluster with the existing one ensures high availability and better performance. If one load balancer fails, the other can seamlessly take over.
+- **Split components**: By separating each component (web server, application server, and database) into their own dedicated servers, you can better optimize each for its specific task, handle more traffic, and reduce the risk of a single point of failure.
