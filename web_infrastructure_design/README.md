@@ -35,9 +35,9 @@ This outlines the design of a distributed web infrastructure. It details a three
 - **Security**: Without a proper firewall and HTTPS, your setup is vulnerable to various types of attacks, such as DDoS attacks and data breaches.
 - **Monitoring**: Without a proper monitoring solution, it might be difficult to identify and react to issues in a timely manner, which could lead to extended downtime or data loss.
 
-# Secured and Monitored Web Infrastructure
+# 2-Secured and Monitored Web Infrastructure
 
-This README covers the design of a secure, encrypted, and monitored web infrastructure. It details a three-server setup that hosts the website www.foobar.com.
+This covers the design of a secure, encrypted, and monitored web infrastructure. It details a three-server setup that hosts the website www.foobar.com.
 ## Specifics to explain about this infrastructure
 
 - **Additional elements**: Each additional element enhances the security, encryption, and monitoring of your infrastructure. Firewalls protect your servers from malicious traffic, SSL certificate encrypts the data in transit, and monitoring clients help track the performance and health of your servers.
