@@ -18,7 +18,7 @@ This is a basic guide and explanation of a simple web infrastructure. It will he
 - **Maintenance downtime**: Whenever maintenance is required (like deploying new code), the web server needs to be restarted. This results in downtime, making your website unavailable during that period.
 - **Scalability**: In case of a sudden surge in traffic, this infrastructure cannot scale up to handle the load, leading to potential performance issues or server crashes.
 
-# Distributed Web Infrastructure
+# 1-Distributed Web Infrastructure
 
 This outlines the design of a distributed web infrastructure. It details a three-server setup that hosts the website www.foobar.com.
 ## Specifics to explain about this infrastructure
